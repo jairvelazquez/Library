@@ -20,10 +20,14 @@ public class Book {
     public void addCopy(){
         System.out.println("Copy added successfully");
     }
+
     public Integer getAvailableCopies(){
         return 0;
     }
 
+    public void lendCopy(){
+
+    }
 
     public List<Copy> getCopies() {
         return copies;
@@ -47,7 +51,7 @@ public class Book {
 
     public void setPages(Integer pages) {
         if(pages < 0){
-            System.out.println("Numero de paginas invalido");
+            System.out.println("Number of pages is invalid");
         }
         else{
             this.pages = pages;

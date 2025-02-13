@@ -45,10 +45,11 @@ public class Main {
         Arreglo Ejemplares
         Accion - Listar numero de ejemplares disponibles (No recibe nada, retorna un entero)
         Accion - Agregar ejemplar (No recibe nada, no retorna nada)
+        Accion - PrestarEjemplar (no recibe nada, no retorna nada)
 
         Copy
         Estado (Disponible, en prestamo)
-        Accion - Prestar (No recibe nada, no retorna nada)
+        Accion - marcarPrestado (No recibe nada, no retorna nada)
 
     */
 }
