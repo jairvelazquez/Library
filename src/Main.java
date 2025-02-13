@@ -12,7 +12,7 @@ public class Main {
         String titulo = scanner.nextLine();
         System.out.println("Ingrese titulo de author");
         String author = scanner.nextLine();
-        System.out.println("Inghrese numero de paginas");
+        System.out.println("Ingrese numero de paginas");
 
         Integer numeroDePaginas= scanner.nextInt();
 
