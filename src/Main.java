@@ -1,15 +1,54 @@
+import library.Book;
+
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese titulo de libro");
+        String titulo = scanner.nextLine();
+        System.out.println("Ingrese titulo de author");
+        String author = scanner.nextLine();
+        System.out.println("Inghrese numero de paginas");
+
+        Integer numeroDePaginas= scanner.nextInt();
+
+
+        Book libro = new Book(titulo, author);
+        libro.setPages(numeroDePaginas);
+
+        System.out.println("Titulo:" + libro.getTitle());
+        System.out.println("author:" + libro.getAuthor());
+        System.out.println("pages:" + libro.getPages());
+
     }
+
+        /*
+        Library
+
+        Nombre
+        Accion - Agregar nuevos libros (Recibe un libro, no retorna nada)
+        Accion- Deshacerse de un libro (Recibe el nombre del libro, no retorna nada)
+        Accion - Listar el catalogo de libros (No recibe nada, retorna una lista de libros)
+        Accion - Ordenar por categoria (Recibe el nombre de la categoria, retorna una lista de libros)
+
+        Book
+
+        Titulo
+        Autor
+        Paginas
+        Editorial
+        Categoria
+        Arreglo Ejemplares
+        Accion - Listar numero de ejemplares disponibles (No recibe nada, retorna un entero)
+        Accion - Agregar ejemplar (No recibe nada, no retorna nada)
+
+        Copy
+        Estado (Disponible, en prestamo)
+        Accion - Prestar (No recibe nada, no retorna nada)
+
+    */
 }
