@@ -8,6 +8,10 @@ public class Library {
     private final String library_name="The corner";
     private List<Book> booklist;
 
+    public Library (){
+        this.booklist=new ArrayList<>();
+    }
+
     public String getLibraryName() {
         return library_name;
     }

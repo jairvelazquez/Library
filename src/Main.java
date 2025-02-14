@@ -1,4 +1,5 @@
 import library.Book;
+import library.Library;
 
 import java.util.Scanner;
 
@@ -17,13 +18,15 @@ public class Main {
         Integer numeroDePaginas= scanner.nextInt();
 
 
-        Book libro = new Book(titulo, author);
-        libro.setPages(numeroDePaginas);
+        Book book = new Book(titulo, author);
+        book.setPages(numeroDePaginas);
 
-        System.out.println("Titulo:" + libro.getTitle());
-        System.out.println("author:" + libro.getAuthor());
-        System.out.println("pages:" + libro.getPages());
+        System.out.println("Titulo:" + book.getTitle());
+        System.out.println("author:" + book.getAuthor());
+        System.out.println("pages:" + book.getPages());
 
+        Library newlibrery= new Library();
+        newlibrery.addbook(book);
     }
 
         /*
