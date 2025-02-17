@@ -16,17 +16,56 @@ public class Book {
           this.title = title;
           this.author = author;
     }
+    public Book(String title, String author, Integer pages){
+        this.title = title;
+        this.author = author;
+        this.pages= pages;
+    }
+    public Book(String title, String author, Integer pages, String editorial){
+        this.title = title;
+        this.author = author;
+        this.pages= pages;
+        this.editorial=editorial;
+    }
+    public Book(String title, String author, Integer pages, String editorial, Category category){
+        this.title = title;
+        this.author = author;
+        this.pages= pages;
+        this.editorial=editorial;
+        this.category=category;
+    }
+
+    @Override
+    public String toString() {
+        return title;
+    }
 
     public void addCopy(){
+        copies.add(new Copy());
         System.out.println("Copy added successfully");
     }
 
     public Integer getAvailableCopies(){
-        return 0;
+        int i=0;
+        for (Copy copy:copies){
+            if (copy.getstatus().equals(CopyStatus.AVAILABLE));{
+                i= i+1;
+            }
+        }
+        System.out.print(this.title+"Copies available:" +i);
+        return i;
     }
-
-    public void lendCopy(){
-
+    public void lendCopy() {
+        boolean lended=false;
+        for (Copy copy : copies) {
+            if (copy.getstatus().equals(CopyStatus.AVAILABLE)) {
+                copy.setStatus(CopyStatus.ON_LOAN);
+                lended = true;
+            }
+        }
+        if (!lended) {
+            System.out.println("No copies available");
+        }
     }
 
     public List<Copy> getCopies() {

@@ -21,12 +21,15 @@ public class Main {
         Book book = new Book(titulo, author);
         book.setPages(numeroDePaginas);
 
-        System.out.println("Titulo:" + book.getTitle());
-        System.out.println("author:" + book.getAuthor());
-        System.out.println("pages:" + book.getPages());
+        System.out.println("Title:" + book.getTitle());
+        System.out.println("Author:" + book.getAuthor());
+        System.out.println("Pages:" + book.getPages());
+        System.out.println("Editorial:" + book.getEditorial());
+        System.out.println("Category:" + book.getCategory());
 
         Library newlibrery= new Library();
         newlibrery.addbook(book);
+        System.out.println(book.toString());
     }
 
         /*
