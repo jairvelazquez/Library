@@ -1,5 +1,6 @@
 package library;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
@@ -13,21 +14,29 @@ public class Book {
     private List<Copy> copies;
 
     public Book(String title, String author){
-          this.title = title;
-          this.author = author;
+        copies = new ArrayList<>();
+        copies.add(new Copy());
+        this.title = title;
+        this.author = author;
     }
     public Book(String title, String author, Integer pages){
+        copies = new ArrayList<>();
+        copies.add(new Copy());
         this.title = title;
         this.author = author;
         this.pages= pages;
     }
     public Book(String title, String author, Integer pages, String editorial){
+        copies = new ArrayList<>();
+        copies.add(new Copy());
         this.title = title;
         this.author = author;
         this.pages= pages;
         this.editorial=editorial;
     }
     public Book(String title, String author, Integer pages, String editorial, Category category){
+        copies = new ArrayList<>();
+        copies.add(new Copy());
         this.title = title;
         this.author = author;
         this.pages= pages;
@@ -37,7 +46,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return title;
+        return "Title: "+title+"\n"+"Author: "+author +"\n"+ "Pages: "+pages+"\n"+"Editorial: "+editorial+"\n"+"Category: "+category+ "\n"+ copies.size();
     }
 
     public void addCopy(){

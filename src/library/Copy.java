@@ -10,22 +10,25 @@ public class Copy {
         */
     private CopyStatus status;
 
-    public Copy (){
-        this.status=CopyStatus.AVAILABLE;
+    public Copy() {
+        this.status = CopyStatus.AVAILABLE;
     }
-    public CopyStatus getstatus(){
+
+    public CopyStatus getstatus() {
         return this.status;
     }
+
     public void setStatus(CopyStatus status) {
+
         this.status = status;
     }
 
-    public void loancopy(){
-        this.status=CopyStatus.ON_LOAN;
+    public void loancopy() {
+        this.status = CopyStatus.ON_LOAN;
     }
 
-    public void returcopy(){
-        this.status=CopyStatus.AVAILABLE;
+    public void returcopy() {
+        this.status = CopyStatus.AVAILABLE;
     }
 
 }
